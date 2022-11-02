@@ -1,0 +1,184 @@
+﻿<Window x:Class="Wpf_Kasse_App.Uc.CalculatorUC"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Kasse_App.Uc"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="CalculatorUC" Height="450" Width="800">
+    <Border  CornerRadius="10">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="resultLabel" 
+               Content="0"
+               HorizontalAlignment="Right" 
+               VerticalAlignment="Bottom"
+                   FontSize="60"
+              
+               Grid.ColumnSpan="4"/>
+
+            <Button x:Name="acButton" 
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Content="AC"
+                Grid.Row="1"/>
+
+            <Button Content="+/-"
+                x:Name="negativeButton" 
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Row="1"
+                Grid.Column="1"/>
+
+            <Button Content="%"
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"   
+                x:Name="percentageButton" 
+                Grid.Row="1"
+                Grid.Column="2"/>
+
+            <Button Content="/"
+                Grid.Row="1"
+                Click="OperationButton_Click"
+                x:Name="divisionButton" 
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Column="3"/>
+
+            <Button Content="7"
+                Click="NumberButton_Click"
+                Grid.Row="2"
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                x:Name="sevenButton" 
+                />
+
+            <Button Content="8"
+                Click="NumberButton_Click"
+                x:Name="eightButton" 
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Row="2"
+                Grid.Column="1"
+                />
+
+            <Button Content="9"
+                Click="NumberButton_Click"
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Row="2"
+                x:Name="nineButton" 
+                Grid.Column="2"
+                />
+
+            <Button Content="*"
+                Click="OperationButton_Click"
+                Grid.Row="2"
+                x:Name="multiplicationButton" 
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Column="3"
+                />
+
+            <Button Content="4"
+                Click="NumberButton_Click"
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Row="3"
+                x:Name="fourButton" 
+                />
+
+            <Button Content="5"
+                Click="NumberButton_Click"
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Row="3"
+                x:Name="fiveButton" 
+                Grid.Column="1"
+                />
+
+            <Button Content="6"
+                Click="NumberButton_Click"
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Row="3"
+                x:Name="sixButton" 
+                Grid.Column="2"
+                />
+
+            <Button Content="-"
+                Click="OperationButton_Click"
+                Grid.Row="3"
+                x:Name="subtractionButton" 
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Column="3"
+                />
+
+            <Button Content="1"
+                Click="NumberButton_Click"
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Row="4"
+                x:Name="oneButton" 
+               
+                />
+
+            <Button Content="2"
+                Click="NumberButton_Click"
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Row="4"
+                x:Name="twoButton" 
+                Grid.Column="1"
+                />
+
+            <Button Content="3"
+                Click="NumberButton_Click"
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Row="4"
+                x:Name="threeButton" 
+                Grid.Column="2"
+                />
+
+            <Button Content="+"
+                Click="OperationButton_Click"
+                Grid.Row="4"
+                x:Name="additionButton"
+                Style="{StaticResource MaterialDesignFloatingActionDarkButton}"
+                Grid.Column="3"
+                />
+
+
+
+            <Button Content="0"
+                Click="NumberButton_Click"
+                Grid.Row="5"
+                x:Name="zeroButton"
+                Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                Grid.ColumnSpan="2"
+               
+                />
+
+
+
+            <Button Content=","
+                Click="PointButton_Click"
+                Grid.Row="5"
+                Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                Grid.Column="2"
+                x:Name="dotButton" 
+                />
+
+            <Button Content="="
+                Grid.Row="5"
+                x:Name="equalButton" 
+                Style="{StaticResource MaterialDesignFlatMidBgButton}"
+                Grid.Column="3"
+                />
+
+        </Grid>
+    </Border>
+</Window>
