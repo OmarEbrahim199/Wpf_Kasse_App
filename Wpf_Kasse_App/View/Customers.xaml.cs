@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace Wpf_Kasse_App.View
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for Customers.xaml
     /// </summary>
-    public partial class Home : UserControl
+    public partial class Customers : UserControl
     {
-        public Home()
+        public Customers()
         {
             InitializeComponent();
         }

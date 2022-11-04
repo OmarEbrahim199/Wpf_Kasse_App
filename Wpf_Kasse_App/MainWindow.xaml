@@ -4,18 +4,188 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Kasse_App"
+         xmlns:vm="clr-namespace:Wpf_Kasse_App.ViewModel"
+        xmlns:Menu="clr-namespace:Wpf_Kasse_App.Utilities"
+        xmlns:materialDesignMahApps="http://materialdesigninxaml.net/winfx/xaml/themes" 
+    xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:Menu1="clr-namespace:Wpf_Kasse_App.Utilities"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"  WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow">
+        Title="MainWindow" Height="600" Width="800"  WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow"  AllowsTransparency="False" Background="Transparent">
+
+    <Window.DataContext>
+        <vm:NavigationVM />
+    </Window.DataContext>
 
     <Grid>
-        <Button Name="PointOfSall" Content="PointOfSall" HorizontalAlignment="Left" Margin="26,46,0,0" VerticalAlignment="Top" Click="PointOfSall_Click"/>
-        <Button Name="Calculator"  Content="calculator" HorizontalAlignment="Left" Margin="26,116,0,0" VerticalAlignment="Top" Click="Calculator_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="26,195,0,0" VerticalAlignment="Top"/>
 
+        <!--// Window Border //-->
 
+        <Border Background="#212529"
+                CornerRadius="20" />
 
+        <Grid>
+
+            <!--// Base Grid //-->
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="228" />
+                <ColumnDefinition Width="622" />
+            </Grid.ColumnDefinitions>
+
+            <!--// Navigation Panel //-->
+
+            <Grid HorizontalAlignment="Left"
+                  Width="228">
+
+                <Border Background="#272B2F"
+                        CornerRadius="20,0,0,20" >
+                    <TextBlock Name="timerlabel"  TextWrapping="Wrap" Text="TextBlock" Margin="10,21,22,531" RenderTransformOrigin="-0.533,-21.098" FontWeight="Bold" FontFamily="Arial" FontSize="20" TextAlignment="Center"/>
+                </Border>
+
+                <StackPanel Height="400"
+                            Width="228">
+
+                    <!--// Home //-->
+
+                    <Menu1:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding HomeCommand}"
+                              IsChecked="True">
+
+                        <Grid>
+
+                            <Image Source="Images/img_home.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Home"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu1:Btn>
+
+                    <!--// Customer //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding CustomersCommand}">
+
+                        <Grid>
+
+                            <Image Source="Images/img_customer.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Customer"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!--// Products //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding ProductsCommand}">
+
+                        <Grid>
+
+                            <Image Source="Images/img_product.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Products"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!--// Orders //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding OrdersCommand}">
+
+                        <Grid>
+
+                            <Image Source="Images/img_order.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Orders"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!--// Transactions //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding TransactionsCommand}">
+
+                        <Grid>
+
+                            <Image Source="Images/img_transaction.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Transactions"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!--// Shipments //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding ShipmentsCommand}">
+
+                        <Grid>
+
+                            <Image Source="Images/img_shipment.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Shipments"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                    <!--// Settings //-->
+
+                    <Menu:Btn Style="{StaticResource BtnStyle}"
+                              Command="{Binding SettingsCommand}">
+
+                        <Grid>
+
+                            <Image Source="Images/img_setting.png"
+                                   Style="{StaticResource Image_Style}" />
+
+                            <TextBlock Text="Settings"
+                                       Style="{StaticResource Text_Style}" />
+
+                        </Grid>
+
+                    </Menu:Btn>
+
+                </StackPanel>
+
+            </Grid>
+
+            <Grid Grid.Column="1">
+
+                <ContentControl x:Name="Pages"
+                                Content="{Binding CurrentView}" />
+
+            </Grid>
+
+        </Grid>
+
+        <Button x:Name="CloseApp"
+                Style="{StaticResource ExitApp}"
+                Click="CloseApp_Click" />
 
     </Grid>
 
 
 </Window>
+
+    
