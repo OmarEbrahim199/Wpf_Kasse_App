@@ -38,10 +38,7 @@
             <Grid HorizontalAlignment="Left"
                   Width="228">
 
-                <Border Background="#272B2F"
-                        CornerRadius="20,0,0,20" >
-                    <TextBlock Name="timerlabel"  TextWrapping="Wrap" Text="TextBlock" Margin="10,21,22,531" RenderTransformOrigin="-0.533,-21.098" FontWeight="Bold" FontFamily="Arial" FontSize="20" TextAlignment="Center"/>
-                </Border>
+                
 
                 <StackPanel Height="400"
                             Width="228">
@@ -171,17 +168,23 @@
             </Grid>
 
             <Grid Grid.Column="1">
+                <TextBlock Name="timerlabel"  TextWrapping="Wrap" Text="TextBlock" Margin="225,22,137,538" RenderTransformOrigin="-0.533,-21.098" FontWeight="Bold" FontFamily="Arial" FontSize="20" TextAlignment="Center" Foreground="#FFDA0D0D"/>
+
 
                 <ContentControl x:Name="Pages"
                                 Content="{Binding CurrentView}" />
+               
+                
 
             </Grid>
 
         </Grid>
 
+
         <Button x:Name="CloseApp"
                 Style="{StaticResource ExitApp}"
                 Click="CloseApp_Click" />
+
 
     </Grid>
 

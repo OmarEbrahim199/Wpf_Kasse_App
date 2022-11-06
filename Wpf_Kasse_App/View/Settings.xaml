@@ -15,36 +15,47 @@
     
     <Grid Margin="15">
 
-        <Border CornerRadius="0,20,20,0">
-            <Border.Background>
-                <ImageBrush ImageSource="/Images/setting_page.png"
-                            Stretch="None" />
-            </Border.Background>
-        </Border>
 
-        <TextBlock Foreground="#CED565"
-                   FontSize="12"
-                   TextAlignment="Center"
-                   HorizontalAlignment="Right"
-                   VerticalAlignment="Top"
-                   FontFamily="/Fonts/#Rubik Medium"
-                   Margin="0,270,223,0">
 
-            <TextBlock.Style>
-                <Style TargetType="{x:Type TextBlock}">
-                    <Setter Property="Text"
-                            Value="OFF" />
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Settings}"
-                                     Value="True">
-                            <Setter Property="Text"
-                                    Value="ON" />
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </TextBlock.Style>
-            
-        </TextBlock>
+        <StackPanel Orientation="Vertical"  HorizontalAlignment="Center">
+
+
+            <Button Click="Button_ClickUser" VerticalAlignment="Center" HorizontalContentAlignment="Center" Height="107" Width="100" >
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Assets/icons8-card-payment-64.png"  />
+                    <TextBlock FontWeight="Bold" Background="Blue" HorizontalAlignment="Stretch" TextAlignment="Center" Padding="6">User"</TextBlock>
+                </StackPanel>
+            </Button>
+
+            <Button  VerticalAlignment="Center" HorizontalContentAlignment="Center"  Height="107" Background="Red"  Width="100">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Assets/icons8-card-payment-64.png"  />
+                    <TextBlock FontWeight="Bold" Background="Blue" HorizontalAlignment="Stretch" TextAlignment="Center" Padding="6">Categores"</TextBlock>
+                </StackPanel>
+            </Button>
+
+            <Button  VerticalAlignment="Center" HorizontalContentAlignment="Center"   Height="107" Background="Red" Width="100">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Assets/icons8-card-payment-64.png"  />
+                    <TextBlock FontWeight="Bold" Background="Blue" HorizontalAlignment="Stretch" TextAlignment="Center" Padding="6">Items"</TextBlock>
+                </StackPanel>
+            </Button>
+
+            <Button  VerticalAlignment="Center" HorizontalContentAlignment="Center"   Height="107" Background="Red" Width="100">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Assets/icons8-card-payment-64.png"  />
+                    <TextBlock FontWeight="Bold" Background="Blue" HorizontalAlignment="Stretch" TextAlignment="Center" Padding="6">Payments"</TextBlock>
+                </StackPanel>
+            </Button>
+
+            <Button  VerticalAlignment="Center" HorizontalContentAlignment="Center"   Height="107" Background="Red" Width="100">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Assets/icons8-card-payment-64.png"  />
+                    <TextBlock FontWeight="Bold" Background="Blue" HorizontalAlignment="Stretch" TextAlignment="Center" Padding="6">Categores"</TextBlock>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
 
     </Grid>
 </UserControl>

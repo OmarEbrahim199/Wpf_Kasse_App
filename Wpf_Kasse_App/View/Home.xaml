@@ -10,12 +10,37 @@
 
     <Grid>
 
-        <Border CornerRadius="0,20,20,0" Margin="0,5,5,0">
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
 
-            <Image Source="/Images/home_page.png"
-                   Stretch="Fill" />
+         <Button  VerticalAlignment="Center" HorizontalContentAlignment="Center"  Click="ButtonCalander_Click" Height="107">
+            <StackPanel Orientation="Vertical">
+                <Image Source="/Assets/icons8-card-payment-64.png"  />
+                    <TextBlock FontWeight="Bold" Background="Blue" HorizontalAlignment="Stretch" TextAlignment="Center" Padding="6">Calenar"</TextBlock>
+            </StackPanel>
+         </Button>
+            
+         <Button  VerticalAlignment="Center" HorizontalContentAlignment="Center"  Click="ButtonCAL_Click" Height="107" Background="Red">
+            <StackPanel Orientation="Vertical">
+                <Image Source="/Assets/icons8-card-payment-64.png"  />
+                    <TextBlock FontWeight="Bold" Background="Blue" HorizontalAlignment="Stretch" TextAlignment="Center" Padding="6">CalCulator"</TextBlock>
+            </StackPanel>
+        </Button>
 
-        </Border>
+        </StackPanel>
+
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+            <Button HorizontalContentAlignment="Center"  Click="ButtonPOF_Click" Height="108" Background="Red">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="/Assets/icons8-card-payment-64.png"  />
+                    <TextBlock FontWeight="Bold" Background="Blue" HorizontalAlignment="Stretch" TextAlignment="Center" Padding="6"><Run Text="Point Of Sall;"/></TextBlock>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+
+
+
 
     </Grid>
 </UserControl>

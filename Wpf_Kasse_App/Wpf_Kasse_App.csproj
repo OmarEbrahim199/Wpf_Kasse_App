@@ -37,12 +37,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DB\" />
     <Folder Include="Themes\" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MaterialDesignThemes.MahApps" Version="0.2.5" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -62,6 +62,12 @@
     <Resource Include="Images\shutdown_def.png" />
     <Resource Include="Images\shutdown_mo.png" />
     <Resource Include="Images\transaction_page.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="App.config">
+      <Generator>MSBuild:Compile</Generator>
+    </None>
   </ItemGroup>
 
 </Project>

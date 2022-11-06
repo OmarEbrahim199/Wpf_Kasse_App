@@ -10,29 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Wpf_Kasse_App.View
 {
     /// <summary>
-    /// Interaction logic for Settings.xaml
+    /// Interaction logic for FormUsers.xaml
     /// </summary>
-    public partial class Settings : UserControl
+    public partial class FormUsers : Window
     {
-        public Settings()
+        public FormUsers()
         {
             InitializeComponent();
-        }
-
-        private void Button_ClickUser(object sender, RoutedEventArgs e)
-        {
-
-            MainOption cw = new MainOption();
-            cw.ShowInTaskbar = false;
-            cw.Owner = System.Windows.Application.Current.MainWindow;
-            cw.Show();
-
         }
     }
 }
